@@ -1,5 +1,7 @@
-// Time Complexity
+// Time Complexity and Space Complexity
 // Number of opeartions go up relation to N
+
+// ! O(1) < O(log n) < O(n) < O(nlog n) < O((n^2))
 
 // Constant don't matter
 // O(2n) is O(n)
@@ -30,9 +32,9 @@ function addUpTo(n) {
 
 
 let t1 = performance.now()
-console.log(addUpTo(100_000_000))
+// console.log(addUpTo(100_000_000))
 let t2 = performance.now()
-console.log(`Time elapsed for the 1. ${(t2 - t1) / 1_000} seconds.`)
+// console.log(`Time elapsed for the 1. ${(t2 - t1) / 1_000} seconds.`)
 
 
 // O(1) Always 3 operations
@@ -43,9 +45,9 @@ function addUpTo2(n) {
 
 
 let t3 = performance.now()
-console.log(addUpTo2(100_000_000))
+// console.log(addUpTo2(100_000_000))
 let t4 = performance.now()
-console.log(`Time elapsed for the 2. ${(t4 - t3) / 1_000} seconds.`)
+// console.log(`Time elapsed for the 2. ${(t4 - t3) / 1_000} seconds.`)
 
 // O(n)
 function countUpAndDown(n) {
@@ -72,3 +74,26 @@ function printAllPairs(n) {
 
 
 // Space Complexity
+
+// O(1) space is always constant (let = total)
+function sum(arr) {
+  let total = 0
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i]
+  }
+  return total
+}
+
+// O(n)
+function doubleArr(arr) {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i])
+  }
+  return newArr
+}
+
+// Logarithm
+// log^2(8) = 3 / 2^3 = 8
+// log^2(value) = exponent / 2^exponent = value
+
